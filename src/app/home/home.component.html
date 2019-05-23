@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main-header">
+    <h1 class="main-title">
+        Pokemon
+    </h1>
+    <img alt="Cover-Pokemon" class="background-image" src="../assets/img/pokemon.jpg">
+    <img alt="Pokeball" class="pokeball-button" title="Home" [routerLink]="['/home']" src="../assets/img/pokeball.png">
+    <img alt="Arrow" [@scaleAnimation]="stateScale" (click)="scrollToContent()" class="arrow-button" src="../assets/img/arrow.png">
+</div>
+
+<div id="home-content">
+
+    <div id="div-subtitle">
+        <h2 id="home-subtitle" style="display:inline-block;">Select 2 pokemons for fight : </h2>
+        <div class="start-div" *ngIf="selectedPokemons.length == 2" [routerLink]="['/fight', selectedPokemons[0].name, selectedPokemons[1].name]">
+            <img alt="Pokeball" class="start-image" src="../assets/img/pokeball.png">
+            <p class="start-text">Start</p>
+        </div>
+    </div>
+
+    <div id="content-div">
+        <div *ngFor="let pokemon of pokemons" [className]="pokemon.selected ? 'pokemon-card selected' : 'pokemon-card'" (click)="selectPokemon(pokemon);" >
+            <p class="pokemon-name">{{ pokemon.name.toUpperCase() }}</p>
+            <div class="card-left">
+                <img src="{{ pokemon.frontDefault }}">
+            </div>
+            <div class="card-right">
+                <ul style="text-align:left;">
+                    <li>Lvl : {{ pokemon.level }}</li>
+                    <li>Hp : {{ pokemon.hp }}</li>
+                    <li>Speed : {{ pokemon.level }}</li>
+                    <li>Attack : {{ pokemon.attack }}</li>
+                    <li>Defense : {{ pokemon.defense }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer-div">
+    <p>Hugo LE DEU & Davy Monnier © Copyright 2019</p>
+</div>

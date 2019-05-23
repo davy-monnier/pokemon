@@ -1,0 +1,50 @@
+#home-subtitle {
+    margin: 1.5vw;
+    font-weight: 100;
+    font-size: 1.5vw;
+}
+
+#home-content {
+    width: 100vw;
+}
+
+#content-div {
+    height: 80vh;
+    overflow: scroll;
+}
+
+.pokemon-card {
+    background-color: white;
+    color: black;
+    width: 20vw;
+    display: inline-block;
+    margin: 0 1.5vw 5vh 1.5vw;
+    padding: 0.5vh 1vw;
+    border-radius: 25px;
+    font-size: 1vw;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pokemon-card:hover {
+    background-color: #cccccc;
+}
+
+.pokemon-card.selected {
+    background-color: #2a75bb;
+}
+
+.card-left {
+    width: 40%;
+    display: inline-block;
+}
+
+.card-right {
+    width: 60%;
+    display: inline-block;
+}
+
+.pokemon-name {
+    margin-block-end: 0;
+    color: darkred;
+}
