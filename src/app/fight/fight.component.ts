@@ -5,7 +5,7 @@ import { tap, mergeMap } from 'rxjs/operators';
 import * as $ from "jquery";
 
 import { Pokemon, AttackResult } from '../model/pokemon';
-import { Log, LogType } from '../model/log';
+import { LogType } from '../model/log';
 
 import { FightService, PokemonFightListener } from '../services/fight.service';
 import { LoggerService } from '../services/logger.service';

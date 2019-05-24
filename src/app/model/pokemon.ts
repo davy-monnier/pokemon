@@ -19,7 +19,7 @@ export class Pokemon {
 
         return new Pokemon(
             json.name,
-            100,
+            20,
             json.stats[5]['base_stat'] * 100,
             json.stats[5]['base_stat'] * 100,
             100,
